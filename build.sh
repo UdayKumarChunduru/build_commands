@@ -46,7 +46,7 @@ git clone https://github.com/UdayKumarChunduru/android_vendor_xiaomi_munch-firmw
 # ----------------------------------------
 # Step 8: Clone Kernel Source
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 kernel/xiaomi/sm8250; \
+git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging --depth=1 kernel/xiaomi/sm8250; \
 
 # ----------------------------------------
 # Step 9: Clone Xiaomi Hardware Support
