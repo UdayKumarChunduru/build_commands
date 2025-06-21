@@ -31,12 +31,14 @@ rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && r
 # ----------------------------------------
 # Step 5: Clone Device Trees
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/android_device_xiaomi_munch device/xiaomi/munch; \
+git clone https://github.com/UdayKumarChunduru/device_xiaomi_munch device/xiaomi/munch; \
+git clone https://github.com/UdayKumarChunduru/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common; \
 
 # ----------------------------------------
 # Step 6: Clone Vendor Trees
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
+git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
+git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
 
 # ----------------------------------------
 # Step 7: Clone Munch Firmware
