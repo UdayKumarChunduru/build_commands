@@ -14,7 +14,8 @@ rm -rf .repo/local_manifests; \
 # ----------------------------------------
 # InfinityX
 # ----------------------------------------
-repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
+#repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
 
 # ----------------------------------------
 # Step 3: Sync Sources
@@ -48,8 +49,8 @@ git clone https://github.com/UdayKumarChunduru/android_vendor_xiaomi_munch-firmw
 # ----------------------------------------
 # Step 8: Clone Kernel Source
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging --depth=1 kernel/xiaomi/sm8250; \
-# git clone https://github.com/munch-devs/kernel_xiaomi_munch -b ksu-susfs --depth=1 kernel/xiaomi/sm8250; \
+# git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging --depth=1 kernel/xiaomi/sm8250; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b ksu-susfs --depth=1 kernel/xiaomi/sm8250; \
 
 # ----------------------------------------
 # Step 9: Clone Xiaomi Hardware Support
@@ -81,3 +82,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 # ----------------------------------------
 source build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
+
