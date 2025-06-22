@@ -137,3 +137,4 @@ lunch infinity_munch-user && mka bacon; \
 # Step 15.9: Rename Output to Full GApps
 # ----------------------------------------
 cd out/target/product && mv munch full_gapps && cd ../../..; \
+
