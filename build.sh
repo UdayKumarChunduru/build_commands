@@ -14,8 +14,8 @@ rm -rf .repo/local_manifests; \
 # ----------------------------------------
 # InfinityX
 # ----------------------------------------
-#repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
+repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
+# repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
 
 # ----------------------------------------
 # Step 3: Sync Sources
@@ -50,7 +50,8 @@ git clone https://github.com/UdayKumarChunduru/android_vendor_xiaomi_munch-firmw
 # Step 8: Clone Kernel Source
 # ----------------------------------------
 # git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging --depth=1 kernel/xiaomi/sm8250; \
-git clone https://github.com/munch-devs/kernel_xiaomi_munch -b ksu-susfs --depth=1 kernel/xiaomi/sm8250; \
+#git clone https://github.com/munch-devs/kernel_xiaomi_munch -b ksu-susfs --depth=1 kernel/xiaomi/sm8250; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b ksu-susfs kernel/xiaomi/sm8250; \
 
 # ----------------------------------------
 # Step 9: Clone Xiaomi Hardware Support
@@ -90,8 +91,8 @@ git clone https://gitlab.com/rik-x777/keys.git -b inf vendor/infinity-priv/keys;
 # ----------------------------------------
 # Step 15.1: Build Vanilla ROM
 # ----------------------------------------
-# . build/envsetup.sh; \
-# lunch infinity_munch-user && mka bacon; \
+. build/envsetup.sh; \
+lunch infinity_munch-user && mka bacon; \
 
 # ----------------------------------------
 # Step 15.2: Clear Old Output Directories
@@ -101,28 +102,28 @@ rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/fu
 # ----------------------------------------
 # Step 15.3: Rename Output to Vanilla
 # ----------------------------------------
-# cd out/target/product && mv munch vanilla && cd ../../..; \
+cd out/target/product && mv munch vanilla && cd ../../..; \
 
 # ----------------------------------------
 # Step 15.4: Reconfigure for Standard GApps
 # ----------------------------------------
-# cd device/xiaomi/munch && rm infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
+cd device/xiaomi/munch && rm infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
 
 # ----------------------------------------
 # Step 15.5: Build Standard GApps ROM
 # ----------------------------------------
-# . build/envsetup.sh; \
-# lunch infinity_munch-user && mka bacon; \
+. build/envsetup.sh; \
+lunch infinity_munch-user && mka bacon; \
 
 # ----------------------------------------
 # Step 15.6: Rename Output to Standard GApps
 # ----------------------------------------
-# cd out/target/product && mv munch gapps && cd ../../..; \
+cd out/target/product && mv munch gapps && cd ../../..; \
 
 # ----------------------------------------
 # Step 15.7: Reconfigure for Full GApps
 # ----------------------------------------
-#cd device/xiaomi/munch && rm infinity_munch.mk && mv full_gapps.txt infinity_munch.mk && cd ../../..; \
+cd device/xiaomi/munch && rm infinity_munch.mk && mv full_gapps.txt infinity_munch.mk && cd ../../..; \
 
 # ----------------------------------------
 # Step 15.8: Build Full GApps ROM
