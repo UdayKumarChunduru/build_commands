@@ -80,6 +80,51 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 # ----------------------------------------
 # Step 14: Setup Build Environment and Start Build
 # ----------------------------------------
-source build/envsetup.sh; \
+# ----------------------------------------
+# Step 14.1: Build Vanilla ROM
+# ----------------------------------------
+# . build/envsetup.sh; \
+# lunch infinity_munch-user && mka bacon; \
+
+# ----------------------------------------
+# Step 14.2: Clear Old Output Directories
+# ----------------------------------------
+rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
+
+# ----------------------------------------
+# Step 14.3: Rename Output to Vanilla
+# ----------------------------------------
+# cd out/target/product && mv munch vanilla && cd ../../..; \
+
+# ----------------------------------------
+# Step 14.4: Reconfigure for Standard GApps
+# ----------------------------------------
+# cd device/xiaomi/munch && rm infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
+
+# ----------------------------------------
+# Step 14.5: Build Standard GApps ROM
+# ----------------------------------------
+# . build/envsetup.sh; \
+# lunch infinity_munch-user && mka bacon; \
+
+# ----------------------------------------
+# Step 14.6: Rename Output to Standard GApps
+# ----------------------------------------
+# cd out/target/product && mv munch gapps && cd ../../..; \
+
+# ----------------------------------------
+# Step 14.7: Reconfigure for Full GApps
+# ----------------------------------------
+#cd device/xiaomi/munch && rm infinity_munch.mk && mv full_gapps.txt infinity_munch.mk && cd ../../..; \
+
+# ----------------------------------------
+# Step 14.8: Build Full GApps ROM
+# ----------------------------------------
+. build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
+
+# ----------------------------------------
+# Step 14.9: Rename Output to Full GApps
+# ----------------------------------------
+cd out/target/product && mv munch full_gapps && cd ../../..; \
 
