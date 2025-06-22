@@ -78,6 +78,13 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # ----------------------------------------
+# Step 13: Remove Old Keys and Clone Infinity-X Private Keys
+# ----------------------------------------
+rm -rf vendor/lineage-priv/keys && rm -rf vendor/infinity-priv/keys; \
+
+git clone https://gitlab.com/rik-x777/keys.git -b inf vendor/infinity-priv/keys; \
+
+# ----------------------------------------
 # Step 14: Setup Build Environment and Start Build
 # ----------------------------------------
 # ----------------------------------------
