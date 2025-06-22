@@ -78,60 +78,60 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # ----------------------------------------
-# Step 13: Remove Old Keys and Clone Infinity-X Private Keys
+# Step 14: Remove Old Keys and Clone Infinity-X Private Keys
 # ----------------------------------------
 rm -rf vendor/lineage-priv/keys && rm -rf vendor/infinity-priv/keys; \
 
 git clone https://gitlab.com/rik-x777/keys.git -b inf vendor/infinity-priv/keys; \
 
 # ----------------------------------------
-# Step 14: Setup Build Environment and Start Build
+# Step 15: Setup Build Environment and Start Build
 # ----------------------------------------
 # ----------------------------------------
-# Step 14.1: Build Vanilla ROM
+# Step 15.1: Build Vanilla ROM
 # ----------------------------------------
 # . build/envsetup.sh; \
 # lunch infinity_munch-user && mka bacon; \
 
 # ----------------------------------------
-# Step 14.2: Clear Old Output Directories
+# Step 15.2: Clear Old Output Directories
 # ----------------------------------------
 rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
 
 # ----------------------------------------
-# Step 14.3: Rename Output to Vanilla
+# Step 15.3: Rename Output to Vanilla
 # ----------------------------------------
 # cd out/target/product && mv munch vanilla && cd ../../..; \
 
 # ----------------------------------------
-# Step 14.4: Reconfigure for Standard GApps
+# Step 15.4: Reconfigure for Standard GApps
 # ----------------------------------------
 # cd device/xiaomi/munch && rm infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
 
 # ----------------------------------------
-# Step 14.5: Build Standard GApps ROM
+# Step 15.5: Build Standard GApps ROM
 # ----------------------------------------
 # . build/envsetup.sh; \
 # lunch infinity_munch-user && mka bacon; \
 
 # ----------------------------------------
-# Step 14.6: Rename Output to Standard GApps
+# Step 15.6: Rename Output to Standard GApps
 # ----------------------------------------
 # cd out/target/product && mv munch gapps && cd ../../..; \
 
 # ----------------------------------------
-# Step 14.7: Reconfigure for Full GApps
+# Step 15.7: Reconfigure for Full GApps
 # ----------------------------------------
 #cd device/xiaomi/munch && rm infinity_munch.mk && mv full_gapps.txt infinity_munch.mk && cd ../../..; \
 
 # ----------------------------------------
-# Step 14.8: Build Full GApps ROM
+# Step 15.8: Build Full GApps ROM
 # ----------------------------------------
 . build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
 
 # ----------------------------------------
-# Step 14.9: Rename Output to Full GApps
+# Step 15.9: Rename Output to Full GApps
 # ----------------------------------------
 cd out/target/product && mv munch full_gapps && cd ../../..; \
 
