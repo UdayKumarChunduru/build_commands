@@ -50,8 +50,8 @@ git clone https://github.com/UdayKumarChunduru/android_vendor_xiaomi_munch-firmw
 # Step 8: Clone Kernel Source
 # ----------------------------------------
 # git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging kernel/xiaomi/sm8250; \
-# git clone https://github.com/munch-devs/kernel_xiaomi_munch -b ksu-susfs kernel/xiaomi/sm8250; \
-git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu-susfs kernel/xiaomi/sm8250; \
+# git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
 # git clone https://github.com/SenseiiX/fusionX_sm8250 -b nxt-a16 kernel/xiaomi/sm8250; \
 # cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
