@@ -76,7 +76,7 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 # ----------------------------------------
 # Step 13: Clone BCR
 # ----------------------------------------
-git clone https://github.com/munch-devs/android_vendor_bcr.git vendor/bcr; \
+git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
 
 # ----------------------------------------
 # Step 14: Clone MIUI Camera
