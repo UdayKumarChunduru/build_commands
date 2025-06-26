@@ -25,7 +25,7 @@ repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
 # ----------------------------------------
 # Step 4: Remove Old Device, Kernel, and Vendor Trees
 # ----------------------------------------
-rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250; \
+rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250 && rm -rf kernel_xiaomi_munch; \
 rm -rf vendor/xiaomi/munch && rm -rf vendor/xiaomi/sm8250-common && rm -rf hardware/xiaomi && rm -rf hardware/dolby && rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX && rm -rf vendor/bcr; \
 
