@@ -27,12 +27,12 @@ repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
 # ----------------------------------------
 rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250 && rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch && rm -rf vendor/xiaomi/sm8250-common && rm -rf hardware/xiaomi && rm -rf hardware/dolby && rm -rf vendor/xiaomi/munch-firmware; \
-rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX && rm -rf vendor/bcr; \
+rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX && rm -rf vendor/bcr && rm -rf vendor/prebuilt-package; \
 
 # ----------------------------------------
 # Step 5: Clone Device Trees
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/android_device_xiaomi_munch device/xiaomi/munch; \
+git clone https://github.com/UdayKumarChunduru/android_device_xiaomi_munch -b infinityz device/xiaomi/munch; \
 
 # ----------------------------------------
 # Step 6: Clone Vendor Trees
@@ -77,6 +77,11 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 # Step 13: Clone BCR
 # ----------------------------------------
 git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
+
+# ----------------------------------------
+# Step 14: Clone Prebuilt Packages
+# ----------------------------------------
+git clone https://codeberg.org/munch-devs/android_vendor_prebuilt-package vendor/prebuilt-package; \
 
 # ----------------------------------------
 # Step 14: Clone MIUI Camera
