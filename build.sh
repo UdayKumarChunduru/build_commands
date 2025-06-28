@@ -81,7 +81,8 @@ git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
 # ----------------------------------------
 # Step 14: Clone Prebuilt Packages
 # ----------------------------------------
-git clone https://codeberg.org/munch-devs/android_vendor_prebuilt-package vendor/prebuilt-package; \
+# git clone https://codeberg.org/munch-devs/android_vendor_prebuilt-package vendor/prebuilt-package; \
+git clone https://github.com/UdayKumarChunduru/android_vendor_prebuilt-package vendor/prebuilt-package; \
 
 # ----------------------------------------
 # Step 14: Clone MIUI Camera
