@@ -32,7 +32,7 @@ rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && r
 # ----------------------------------------
 # Step 5: Clone Device Trees
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/android_device_xiaomi_munch -b infinityz device/xiaomi/munch; \
+git clone https://github.com/UdayKumarChunduru/android_device_xiaomi_munch device/xiaomi/munch; \
 
 # ----------------------------------------
 # Step 6: Clone Vendor Trees
