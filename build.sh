@@ -27,7 +27,7 @@ repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
 # ----------------------------------------
 rm -rf out/target/product/munch && rm -rf device/xiaomi/munch && rm -rf device/xiaomi/sm8250-common && rm -rf kernel/xiaomi/sm8250 && rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch && rm -rf vendor/xiaomi/sm8250-common && rm -rf hardware/xiaomi && rm -rf hardware/dolby && rm -rf vendor/xiaomi/munch-firmware; \
-rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX && rm -rf vendor/bcr; \
+rm -rf vendor/xiaomi/miuicamera && rm -rf packages/resources/devicesettings && rm -rf packages/apps/ViPER4AndroidFX && rm -rf vendor/bcr && rm -rf vendor/prebuilt-package; \
 
 # ----------------------------------------
 # Step 5: Clone Device Trees
@@ -47,8 +47,9 @@ git clone https://github.com/UdayKumarChunduru/android_vendor_xiaomi_munch-firmw
 # ----------------------------------------
 # Step 8: Clone Kernel Source
 # ----------------------------------------
-git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging kernel/xiaomi/sm8250; \
+git clone https://github.com/UdayKumarChunduru/Realking_kernel_sm8250 -b m-staging kernel/xiaomi/munch; \
 # git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu-susfs kernel/xiaomi/munch; \
+# git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
 # git clone https://gitlab.com/rik-x777/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250; \
 # git clone https://github.com/SenseiiX/fusionX_sm8250 -b nxt-a16 kernel/xiaomi/sm8250; \
 # cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
@@ -77,6 +78,12 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 # Step 13: Clone BCR
 # ----------------------------------------
 git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
+
+# ----------------------------------------
+# Step 14: Clone Prebuilt Packages
+# ----------------------------------------
+# git clone https://codeberg.org/munch-devs/android_vendor_prebuilt-package vendor/prebuilt-package; \
+# git clone https://github.com/UdayKumarChunduru/android_vendor_prebuilt-package vendor/prebuilt-package; \
 
 # ----------------------------------------
 # Step 14: Clone MIUI Camera
